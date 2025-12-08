@@ -1,12 +1,16 @@
 (function () {
   'use strict';
 
-  const mainContainer = document.querySelector('.hidden-dots-lg');
+  const workContainer = document.querySelector('.hidden-dots-lg');
 
-  if (!mainContainer) {
+  if (!workContainer) {
     console.warn("Container with class 'hidden-dots-lg' not found");
     return;
   }
+
+  const parentContainer = document.createElement('div');
+  parentContainer.id = 'social-message-container';
+  workContainer.appendChild(parentContainer);
 
   const CONFIG = {
     MESSAGE_DELAY: 3000,
@@ -52,8 +56,7 @@
         flex-direction: column;
         gap: 10px;
         max-width: 450px;
-        margin: 10px;
-        margin-top: 200px;
+        margin: 10px;        
       }
 
       .social-message {
@@ -163,7 +166,7 @@
 
     messageElement.style.bottom = `${index * CONFIG.MESSAGE_HEIGHT}px`;
 
-    mainContainer.appendChild(messageElement);
+    parentContainer.appendChild(messageElement);
 
     function showModule() {
       messageElement.classList.add('show');
@@ -213,7 +216,7 @@
       showMessagesSequentially(messageQueue, CONFIG.MESSAGE_DELAY);
     });
 
-    mainContainer.appendChild(replayButton);
+    parentContainer.appendChild(replayButton);
     return replayButton;
   }
 
