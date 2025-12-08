@@ -15,7 +15,7 @@
   const CONFIG = {
     MESSAGE_DELAY: 3000,
     HIDE_DELAY: 8000,
-    MESSAGE_HEIGHT: 60,
+    MESSAGE_HEIGHT: 46,
     ANIMATION_DURATION: 300,
     REPLAY_DELAY: 500,
   };
@@ -32,9 +32,9 @@
       autoHide: true,
     },
     {
-      text: 'Another text sample...................',
-      title: 'Some Text!',
-      icon: '🔥',
+      text: '4 people rated this in the last 24 hours',
+      title: 'Rated!',
+      icon: '⭐',
       autoHide: true,
     },
     {
@@ -56,19 +56,17 @@
         flex-direction: column;
         gap: 10px;
         max-width: 450px;
-        margin: 10px;        
+        margin: 20px 10px;     
       }
 
       .social-message {
         position: absolute;
-        background: #e8e8e8;
-        border-radius: 8px;
-        padding: 12px 16px;
-        height: 24px;
+        background: #f8e1cc;
+        border-radius: 4px;
+        padding: 6px 16px;
         display: flex;
         align-items: center;
         gap: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         overflow: hidden;
         opacity: 0;
